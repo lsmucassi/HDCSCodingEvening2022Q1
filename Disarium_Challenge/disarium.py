@@ -36,9 +36,9 @@ def find_disarium(n: int, m:int) -> str:
                 # iterate through each page number's length
                 while (x != 0) :
                     # get the digit from the rightside of the current number
-                    right = x % 10
+                    right_digit = x % 10
                     # apply the power to the right digit using it's current position
-                    sum_disa = int(sum_disa + right**count_digits)
+                    sum_disa = int(sum_disa + right_digit**count_digits)
                     # move position backward
                     count_digits = count_digits - 1
                     x = x // 10
