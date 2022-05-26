@@ -54,6 +54,8 @@ def find_disarium(n: int, m:int) -> str:
 print(find_disarium(1, 600))          # "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 89 | 135 | 175 | 518 | 598"
 print(find_disarium(50, 2000))        # "89 | 135 | 175 | 518 | 598 | 1306 | 1676"
 print(find_disarium(150, 3000000))    # "175 | 518 | 598 | 1306 | 1676 | 2427 | 2646798"
+print(find_disarium(6000, 200))       # "518 | 598 | 1306 | 1676 | 2427"
 print(find_disarium(-6, 200))         # "Please enter valid page numbers"
 print(find_disarium("150", 3000000))  # "Please enter valid page numbers"
 print(find_disarium(-6, "200"))       # "Please enter valid page numbers"
+print(find_disarium(150.0, 300))      # "Please enter valid page numbers"
