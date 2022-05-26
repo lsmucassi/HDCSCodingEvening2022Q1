@@ -29,7 +29,7 @@ def find_disarium(n: int, m:int) -> str:
             # iterate through the range of pages
             for num in range(n, m + 1):
                 # the length of the current dogit to be used to keep track of the position of digits
-                count_digits = len(str(num))
+                num_count = len(str(num))
                 sum_disa = 0  
                 x = num
 
@@ -38,9 +38,9 @@ def find_disarium(n: int, m:int) -> str:
                     # get the digit from the rightside of the current number
                     right_digit = x % 10
                     # apply the power to the right digit using it's current position
-                    sum_disa = int(sum_disa + right_digit**count_digits)
+                    sum_disa = int(sum_disa + right_digit**num_count)
                     # move position backward
-                    count_digits = count_digits - 1
+                    num_count = num_count - 1
                     x = x // 10
                     
                 if sum_disa == num :
