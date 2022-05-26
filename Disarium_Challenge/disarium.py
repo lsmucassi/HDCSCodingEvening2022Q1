@@ -19,7 +19,6 @@ findDisarium(-6, 200)      --> "Please enter valid page numbers"
 
 def find_disarium(n: int, m:int) -> str:
     disariums = []
-    # result = []
 
     if type(n) == int and type(m) == int:
         if n > 0 and m > 0:
@@ -29,14 +28,18 @@ def find_disarium(n: int, m:int) -> str:
 
             # iterate through the range of pages
             for num in range(n, m + 1):
+                # the length of the current dogit to be used to keep track of the position of digits
                 count_digits = len(str(num))
                 sum_disa = 0  
                 x = num
 
                 # iterate through each page number's length
                 while (x != 0) :
+                    # get the digit from the rightside of the current number
                     right = x % 10
+                    # apply the power to the right digit using it's current position
                     sum_disa = int(sum_disa + right**count_digits)
+                    # move position backward
                     count_digits = count_digits - 1
                     x = x // 10
                     
