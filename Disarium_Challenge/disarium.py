@@ -40,7 +40,7 @@ def find_disarium(n: int, m:int) -> str:
                     # apply the power to the right digit using it's current position
                     sum_disa = int(sum_disa + right_digit**num_count)
                     # move position backward
-                    num_count = num_count - 1
+                    num_count -= 1
                     x = x // 10
                     
                 if sum_disa == num :
