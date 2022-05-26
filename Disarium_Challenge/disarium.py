@@ -10,7 +10,7 @@ Examples:
 --------
 
 Input                      | Output
-------------------------------------------------
+------------------------------------------------------------------------------------------------
 findDisarium(1, 600)       --> "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 89 | 135 | 175 | 518"
 findDisarium(50, 2000)     --> "89 | 135 | 175 | 518 | 598 | 1306 | 1676"
 findDisarium(150, 3000000) --> "175 | 518 | 598 | 1306 | 1676 | 2427 | 2646798"
@@ -45,7 +45,6 @@ def find_disarium(n: int, m:int) -> str:
                     
                 if sum_disa == num :
                     disariums.append(str(sum_disa))
-
         else:
             return "Please enter valid page numbers"
     else:
